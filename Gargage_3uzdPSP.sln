@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gargage_3uzdPSP", "Gargage_3uzdPSP\Gargage_3uzdPSP.csproj", "{EDC8AFD2-691E-40F5-8476-9494A8D06779}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Garage_3uzdPSP", "Gargage_3uzdPSP\Garage_3uzdPSP.csproj", "{EDC8AFD2-691E-40F5-8476-9494A8D06779}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
