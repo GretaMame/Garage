@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gargage_3uzdPSP.HR.HRDomainServices
+namespace Garage_3uzdPSP.HR.HRRepository
 {
-    interface IPayCalculator
+    interface IWorkSheetRepository
     {
-        decimal calculatePay(IWorkSheet worksheet);
+        int AddWorkSheet(IWorkSheet workSheet);
+        IWorkSheet GetWorkSheet(int id);
     }
 }
