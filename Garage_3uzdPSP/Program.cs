@@ -10,6 +10,7 @@ namespace Garage_3uzdPSP
     {
         static void Main(string[] args)
         {
+           
         }
     }
 }

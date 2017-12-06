@@ -43,27 +43,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\CustomerController.cs" />
-    <Compile Include="DomainModel\AfterMarketPart.cs" />
-    <Compile Include="DomainModel\AfterMarketSupplier.cs" />
-    <Compile Include="DomainModel\AfterMarketSupplyFactory.cs" />
-    <Compile Include="DomainModel\FullTimeEmployee.cs" />
-    <Compile Include="DomainModel\FullTimeHRFactory.cs" />
-    <Compile Include="DomainModel\FullTimeSalary.cs" />
-    <Compile Include="DomainModel\ICustomer.cs" />
-    <Compile Include="DomainModel\IEmployee.cs" />
-    <Compile Include="DomainModel\IGarageServiceFactory.cs" />
-    <Compile Include="DomainModel\IHRFactory.cs" />
-    <Compile Include="DomainModel\IPart.cs" />
-    <Compile Include="DomainModel\ISalary.cs" />
-    <Compile Include="DomainModel\IGarageService.cs" />
-    <Compile Include="DomainModel\ISupplier.cs" />
-    <Compile Include="DomainModel\ISupplyFactory.cs" />
-    <Compile Include="DomainModel\OriginalPart.cs" />
-    <Compile Include="DomainModel\OriginalSupplier.cs" />
-    <Compile Include="DomainModel\OriginalSupplyFactory.cs" />
-    <Compile Include="DomainModel\PartTimeEmployee.cs" />
-    <Compile Include="DomainModel\PartTimeHRFactory.cs" />
-    <Compile Include="DomainModel\PartTimeSalary.cs" />
+    <Compile Include="DomainModel\DomainEntities\AfterMarketPart.cs" />
+    <Compile Include="DomainModel\DomainEntities\AfterMarketSupplier.cs" />
+    <Compile Include="DomainModel\DomainEntities\AfterMarketSupplyFactory.cs" />
+    <Compile Include="HR\HRDomainEntities\FullTimeEmployee.cs" />
+    <Compile Include="HR\HRDomainEntities\FullTimeHRFactory.cs" />
+    <Compile Include="HR\HRDomainEntities\FullTimeWorkSheet.cs" />
+    <Compile Include="DomainModel\DomainEntities\ICustomer.cs" />
+    <Compile Include="HR\HRDomainEntities\IEmployee.cs" />
+    <Compile Include="DomainModel\DomainEntities\IGarageServiceFactory.cs" />
+    <Compile Include="HR\HRDomainEntities\IHRFactory.cs" />
+    <Compile Include="DomainModel\DomainEntities\IPart.cs" />
+    <Compile Include="HR\HRDomainEntities\IWorkSheet.cs" />
+    <Compile Include="DomainModel\DomainEntities\IGarageService.cs" />
+    <Compile Include="DomainModel\DomainEntities\ISupplier.cs" />
+    <Compile Include="DomainModel\DomainEntities\ISupplyFactory.cs" />
+    <Compile Include="DomainModel\DomainEntities\OriginalPart.cs" />
+    <Compile Include="DomainModel\DomainEntities\OriginalSupplier.cs" />
+    <Compile Include="DomainModel\DomainEntities\OriginalSupplyFactory.cs" />
+    <Compile Include="HR\HRDomainEntities\PartTimeEmployee.cs" />
+    <Compile Include="HR\HRDomainEntities\PartTimeHRFactory.cs" />
+    <Compile Include="HR\HRDomainEntities\PartTimeWorkSheet.cs" />
     <Compile Include="Facade\HRFacade.cs" />
     <Compile Include="Facade\HRFacadeSimple.cs" />
     <Compile Include="Facade\HRFacadeWithNotification.cs" />
@@ -73,6 +73,12 @@
     <Compile Include="Facade\SupplyFacade.cs" />
     <Compile Include="Facade\SupplyFacadeSimple.cs" />
     <Compile Include="Facade\SupplyFacadeWithNotification.cs" />
+    <Compile Include="HR\HRDomainServices\BonusPayCalculator.cs" />
+    <Compile Include="HR\HRDomainServices\BussinesTripProvider.cs" />
+    <Compile Include="HR\HRDomainServices\HolidayBonus.cs" />
+    <Compile Include="HR\HRDomainServices\IBenefitsProvider.cs" />
+    <Compile Include="HR\HRDomainServices\IPayCalculator.cs" />
+    <Compile Include="HR\HRDomainServices\SimplePayCalculator.cs" />
     <Compile Include="Repository\CustomerRepository.cs" />
     <Compile Include="Repository\EmployeeRepository.cs" />
     <Compile Include="Repository\MemoryCustomerRepository.cs" />
@@ -88,15 +94,16 @@
     <Compile Include="Controllers\HRController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SendMail.cs" />
+    <Compile Include="Integration\SendMail.cs" />
     <Compile Include="Controllers\SimpleCustomerController.cs" />
     <Compile Include="Controllers\SimpleHRController.cs" />
     <Compile Include="Controllers\SimpleSupplyController.cs" />
-    <Compile Include="SMTP.cs" />
+    <Compile Include="Integration\SMTP.cs" />
     <Compile Include="Controllers\SupplyController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
