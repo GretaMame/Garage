@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace Garage_3uzdPSP.HR.HRFacade
 {
-    class HRFacadeSimple : HRFacade
+    class HRFacadeSimple : IHRFacade
     {
-        public int generateWorkseet(int employerID, int hoursWorked, decimal hourlyRate)
+        public int GenerateWorkseet(int employerID, int hoursWorked, decimal hourlyRate)
         {
             throw new NotImplementedException();
         }
 
-        public decimal paySalary(int worksheetID)
+        public decimal CalculateSalary(int worksheetID)
         {
             throw new NotImplementedException();
         }
 
-        public int registerEmployee(string name, string surname, DateTime dateOfEmployment)
+        public int RegisterEmployee(string name, string surname)
         {
             throw new NotImplementedException();
         }

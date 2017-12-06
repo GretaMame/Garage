@@ -10,7 +10,7 @@ namespace Garage_3uzdPSP.HR.HRDomainEntities
     {
         public IEmployee CreateEmployee(string name, string surname, DateTime dateOfBirth)
         {
-            return new PartTimeEmployee(name, surname, dateOfBirth);
+            return new PartTimeEmployee(name, surname);
         }
 
         public IWorkSheet CreateWorkSheet(IEmployee employee, DateTime date, decimal pay, int hours)

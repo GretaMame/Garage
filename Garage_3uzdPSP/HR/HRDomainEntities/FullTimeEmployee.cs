@@ -12,15 +12,12 @@ namespace Garage_3uzdPSP.HR.HRDomainEntities
 
         public string Surname { get; }
 
-        public DateTime BirthDate { get; }
-
         public DateTime DateOfEmployment { get; }
 
-        public FullTimeEmployee(string name, string surname, DateTime dateOfBirth)
+        public FullTimeEmployee(string name, string surname)
         {
             Name = name;
             Surname = surname;
-            BirthDate = dateOfBirth;
             DateOfEmployment = DateTime.Today;
         }
 
