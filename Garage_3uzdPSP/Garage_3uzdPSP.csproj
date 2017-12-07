@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GarageService\GarageServiceUI\GarageServiceUI.cs" />
-    <Compile Include="Supply\SupplyControllers\CustomerController.cs" />
+    <Compile Include="Supply\SupplyControllers\ISupplyController.cs" />
     <Compile Include="Supply\SupplyDomainEntities\AfterMarketPart.cs" />
     <Compile Include="Supply\SupplyDomainEntities\AfterMarketSupplier.cs" />
     <Compile Include="Supply\SupplyDomainEntities\AfterMarketSupplyFactory.cs" />
@@ -71,7 +71,10 @@
     <Compile Include="GarageService\GarageServiceFacade\GarageServiceFacade.cs" />
     <Compile Include="GarageService\GarageServiceFacade\GarageServiceFacadeSimple.cs" />
     <Compile Include="GarageService\GarageServiceFacade\GarageServiceFacadeWithNotification.cs" />
-    <Compile Include="Supply\SupplyFacade\SupplyFacade.cs" />
+    <Compile Include="Supply\SupplyDomainServices\BigAmountOrderRiskRateEvaluator.cs" />
+    <Compile Include="Supply\SupplyDomainServices\IOrderingRiskEvaluator.cs" />
+    <Compile Include="Supply\SupplyDomainServices\SmallAmountOrderRiskRateEvaluator.cs" />
+    <Compile Include="Supply\SupplyFacade\ISupplyFacade.cs" />
     <Compile Include="Supply\SupplyFacade\SupplyFacadeSimple.cs" />
     <Compile Include="Supply\SupplyFacade\SupplyFacadeWithNotification.cs" />
     <Compile Include="HR\HRDomainServices\BonusPayCalculator.cs" />
@@ -95,18 +98,16 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Integration\SendMail.cs" />
-    <Compile Include="Supply\SupplyControllers\SimpleCustomerController.cs" />
+    <Compile Include="Supply\SupplyControllers\SimpleSupplyController.cs" />
     <Compile Include="HR\HRControllers\SimpleHRController.cs" />
     <Compile Include="GarageService\GarageServiceControllers\SimpleSupplyController.cs" />
     <Compile Include="Integration\SMTP.cs" />
     <Compile Include="GarageService\GarageServiceControllers\SupplyController.cs" />
-    <Compile Include="Supply\SupplyUI\SupplyUI.cs" />
+    <Compile Include="Supply\SupplyUI\ConsoleSupplyUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Supply\SupplyDomainServices\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

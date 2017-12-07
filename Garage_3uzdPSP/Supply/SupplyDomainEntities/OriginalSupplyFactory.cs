@@ -12,14 +12,14 @@ namespace Garage_3uzdPSP.Supply.SupplyDomainEntities
         {
         }
 
-        public IPart createPart(string partNo, string manufacturer, ISupplier supplier)
+        public IPart CreatePart(string partNo, string manufacturer, ISupplier supplier)
         {
             return new OriginalPart(partNo, manufacturer, supplier);
         }
 
-        public ISupplier createSupplier()
+        public ISupplier CreateSupplier(string name)
         {
-            throw new NotImplementedException();
+            return new OriginalSupplier(name);
         }
     }
 }

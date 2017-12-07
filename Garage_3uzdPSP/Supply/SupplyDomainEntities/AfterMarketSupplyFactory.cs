@@ -8,14 +8,14 @@ namespace Garage_3uzdPSP.Supply.SupplyDomainEntities
 {
     class AfterMarketSupplyFactory : ISupplyFactory
     {
-        public IPart createPart(string partNo, string manufacturer, ISupplier supplier)
+        public IPart CreatePart(string partNo, string manufacturer, ISupplier supplier)
         {
             return new AfterMarketPart(partNo, manufacturer, supplier);
         }
 
-        public ISupplier createSupplier()
+        public ISupplier CreateSupplier(string name)
         {
-            throw new NotImplementedException();
+            return new AfterMarketSupplier(name);
         }
     }
 }
