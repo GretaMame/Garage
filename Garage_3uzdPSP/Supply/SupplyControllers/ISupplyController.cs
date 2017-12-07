@@ -10,6 +10,6 @@ namespace Garage_3uzdPSP.Supply.SupplyControllers
     {
         int RegisterSupplier(string name);
         int RegisterPart(string partNo, string manufacturer, int supplierID);
-        int EvaluateOrderRisk(int partID);
+        int EvaluateOrderingRisk(int partID);
     }
 }

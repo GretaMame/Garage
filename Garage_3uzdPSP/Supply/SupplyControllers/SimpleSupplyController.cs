@@ -16,7 +16,7 @@ namespace Garage_3uzdPSP.Supply.SupplyControllers
             facade = fsd;
         }
 
-        public int EvaluateOrderRisk(int partID)
+        public int EvaluateOrderingRisk(int partID)
         {
             return facade.EvaluteRisk(partID);
         }

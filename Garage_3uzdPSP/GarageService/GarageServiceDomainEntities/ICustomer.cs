@@ -8,5 +8,6 @@ namespace Garage_3uzdPSP.GarageService.GarageServiceDomainEntities
 {
     interface ICustomer
     {
+        string Name { get; }
     }
 }

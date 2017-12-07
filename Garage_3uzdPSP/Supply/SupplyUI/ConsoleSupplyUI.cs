@@ -27,7 +27,32 @@ namespace Gargage_3uzdPSP.Supply.SupplyUI
 
         public void RegisterPart()
         {
+            Console.WriteLine("--PART REGISTRATION--");
+            Console.WriteLine("Please enter part number:");
+            string partNo = Console.ReadLine();
+            Console.WriteLine("Please enter manufacturer:");
+            string manufacturer = Console.ReadLine();
+            Console.WriteLine("Please enter supplier id:");
+            int id;
+            while (!Int32.TryParse(Console.ReadLine(), out id))
+            {
+                Console.WriteLine("Please enter correct ID");
+            }
+            int partID = controller.RegisterPart(partNo, manufacturer, id);
+            Console.WriteLine("Part successfully added with ID " + partID);
+        }
 
+        public void EvaluateOrderingRisk()
+        {
+            Console.WriteLine("--ORDERING RISK EVALUATION--");
+            Console.WriteLine("Please enter part id:");
+            int id;
+            while (!Int32.TryParse(Console.ReadLine(), out id))
+            {
+                Console.WriteLine("Please enter correct ID");
+            }
+            int risk = controller.EvaluateOrderingRisk(id);
+            Console.WriteLine("Ordering part with ID "+id+"has a risk rate of "+risk);
         }
 
     }
