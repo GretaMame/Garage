@@ -49,6 +49,8 @@
     <Compile Include="GarageService\GarageServiceDomainServices\NoWaitingLineGarageServiceProvider.cs" />
     <Compile Include="GarageService\GarageServiceDomainServices\IGarageServiceProvider.cs" />
     <Compile Include="GarageService\GarageServiceDomainServices\RegularGarageServiceProvider.cs" />
+    <Compile Include="GarageService\GarageServiceRepository\IGarageServiceRepository.cs" />
+    <Compile Include="GarageService\GarageServiceRepository\MemoryGarageServiceRepository.cs" />
     <Compile Include="GarageService\GarageServiceUI\GarageServiceUI.cs" />
     <Compile Include="Supply\SupplyControllers\ISupplyController.cs" />
     <Compile Include="Supply\SupplyDomainEntities\AfterMarketPart.cs" />
@@ -91,7 +93,7 @@
     <Compile Include="HR\HRDomainServices\IPayCalculator.cs" />
     <Compile Include="HR\HRDomainServices\SimplePayCalculator.cs" />
     <Compile Include="HR\HRUI\ConsoleHRUI.cs" />
-    <Compile Include="GarageService\GarageServiceRepository\CustomerRepository.cs" />
+    <Compile Include="GarageService\GarageServiceRepository\ICustomerRepository.cs" />
     <Compile Include="HR\HRRepository\IEmployeeRepository.cs" />
     <Compile Include="GarageService\GarageServiceRepository\MemoryCustomerRepository.cs" />
     <Compile Include="HR\HRRepository\MemoryEmployeeRepository.cs" />
