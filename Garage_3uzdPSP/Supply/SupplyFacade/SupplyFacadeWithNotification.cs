@@ -16,14 +16,16 @@ namespace Garage_3uzdPSP.Facade
         IPartRepository partRepository;
         ISupplyFactory factory;
         IOrderingRiskEvaluator evaluator;
+        ISendMail mailSender;
 
         public SupplyFacadeWithNotification(ISupplierRepository supplierRepository, IPartRepository partRepository,
-            ISupplyFactory factory, IOrderingRiskEvaluator evaluator)
+            ISupplyFactory factory, IOrderingRiskEvaluator evaluator, ISendMail mailSender)
         {
             this.supplierRepository = supplierRepository;
             this.partRepository = partRepository;
             this.factory = factory;
             this.evaluator = evaluator;
+            this.mailSender = mailSender;
         }
 
         public int AddPart(int supplierID, string partNumber, string manufacturer)
@@ -37,15 +39,20 @@ namespace Garage_3uzdPSP.Facade
             }
             IPart part = factory.CreatePart(partNumber, manufacturer, supplier);
             int id = partRepository.AddPart(part);
+            string content = "We would like to place an order for part "+ part.PartNumber +
+                " manufacturer " + part.Manufacturer;
+            mailSender.SendMail(supplier.Email, content);
             Debug.WriteLine("Part with ID " + id + " added to repo from facade");
             return id;
         }
 
-        public int AddSupplier(string name)
+        public int AddSupplier(string name, string email)
         {
-            ISupplier supplier = factory.CreateSupplier(name);
+            ISupplier supplier = factory.CreateSupplier(name, email);
             int id = supplierRepository.AddSupplier(supplier);
             Debug.WriteLine("Supplier with ID " + id + " added to repo from facade");
+            string content = "Congratulations on becoming our supplier!";
+            mailSender.SendMail(supplier.Email, content);
             return id;
         }
 

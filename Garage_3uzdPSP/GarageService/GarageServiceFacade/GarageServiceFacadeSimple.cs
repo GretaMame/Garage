@@ -28,9 +28,9 @@ namespace Garage_3uzdPSP.GarageService.GarageServiceFacade
             this.factory = factory;
         }
 
-        public int AddCustomer(string name, string surname)
+        public int AddCustomer(string name, string surname, string email)
         {
-            ICustomer newCustomer = factory.CreateCustomer(name, surname);
+            ICustomer newCustomer = factory.CreateCustomer(name, surname, email);
             int custID = customerRepository.AddCustomer(newCustomer);
             Debug.WriteLine("Customer with ID " + custID + " added to repo from facade");
             return custID;

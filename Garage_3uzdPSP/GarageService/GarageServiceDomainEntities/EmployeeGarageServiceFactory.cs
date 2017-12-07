@@ -8,9 +8,9 @@ namespace Garage_3uzdPSP.GarageService.GarageServiceDomainEntities
 {
     class EmployeeGarageServiceFactory : IGarageServiceFactory
     {
-        public ICustomer CreateCustomer(string name, string surname)
+        public ICustomer CreateCustomer(string name, string surname, string email)
         {
-            return new EmployeeCustomer(name, surname);
+            return new EmployeeCustomer(name, surname, email);
         }
 
         public IGarageService CreateService(string name, decimal price)

@@ -10,6 +10,7 @@ namespace Garage_3uzdPSP.HR.HRDomainEntities
     {
         string Name { get; }
         string Surname { get; }
+        string Email { get; }
         DateTime DateOfEmployment { get; }
         bool GetsBenefits();
 

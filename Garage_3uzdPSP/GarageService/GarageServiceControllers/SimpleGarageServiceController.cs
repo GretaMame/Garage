@@ -15,9 +15,9 @@ namespace Garage_3uzdPSP.GarageService.GarageServiceControllers
         {
             this.facade = facade;
         }
-        public int AddCustomer(string name, string surname)
+        public int AddCustomer(string name, string surname, string email)
         {
-            return facade.AddCustomer(name, surname);
+            return facade.AddCustomer(name, surname, email);
         }
 
         public int AddGarageService(string name, decimal price)

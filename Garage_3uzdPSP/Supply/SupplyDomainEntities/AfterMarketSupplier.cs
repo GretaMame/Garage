@@ -10,9 +10,12 @@ namespace Garage_3uzdPSP.Supply.SupplyDomainEntities
     {
         public string Name { get; }
 
-        public AfterMarketSupplier(string name)
+        public string Email { get; }
+
+        public AfterMarketSupplier(string name, string email)
         {
             Name = name;
+            Email = email;
         }
 
         public bool IsReliable()

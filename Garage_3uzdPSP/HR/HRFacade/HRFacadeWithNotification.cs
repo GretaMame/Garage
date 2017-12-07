@@ -16,14 +16,16 @@ namespace Garage_3uzdPSP.HR.HRFacade
         IWorkSheetRepository workSheetRepository;
         IHRFactory factory;
         IPayCalculator payCalculator;
+        ISendMail mailSender;
 
         public HRFacadeWithNotification(IEmployeeRepository employeeRepository, IWorkSheetRepository workSheetRepository,
-            IHRFactory factory, IPayCalculator payCalculator)
+            IHRFactory factory, IPayCalculator payCalculator, ISendMail mailSender)
         {
             this.employeeRepository = employeeRepository;
             this.workSheetRepository = workSheetRepository;
             this.factory = factory;
             this.payCalculator = payCalculator;
+            this.mailSender = mailSender;
 
         }
         public int GenerateWorkseet(int employeeID, int hoursWorked, decimal hourlyRate)
@@ -37,6 +39,8 @@ namespace Garage_3uzdPSP.HR.HRFacade
             }
             IWorkSheet worksheet = factory.CreateWorkSheet(employee, DateTime.Today, hourlyRate, hoursWorked);
             int id = workSheetRepository.AddWorkSheet(worksheet);
+            string content = "Worksheet successfully submited on date " + worksheet.WorkSheetDate;
+            mailSender.SendMail(worksheet.employee.Email, content);
             Debug.WriteLine("Worksheet with ID " + id + " added to repo from facade");
             return id;
         }
@@ -50,14 +54,21 @@ namespace Garage_3uzdPSP.HR.HRFacade
                 Console.WriteLine("Worksheet with entered ID not found");
                 return -1m;
             }
-            return payCalculator.calculatePay(worksheet);
+            decimal salary = payCalculator.calculatePay(worksheet);
+            string content = "Below is your payroll info.\nWorksheet date: " + worksheet.WorkSheetDate +
+                "\nSalary: "+salary;
+            mailSender.SendMail(worksheet.employee.Email, content);
+
+            return salary;
         }
 
-        public int RegisterEmployee(string name, string surname)
+        public int RegisterEmployee(string name, string surname, string email)
         {
-            IEmployee employee = factory.CreateEmployee(name, surname);
+            IEmployee employee = factory.CreateEmployee(name, surname, email);
             int id = employeeRepository.AddEmployee(employee);
             Debug.WriteLine("Employee with ID " + id + " added to repo from facade");
+            string content = "Congratulations on becoming a part of our team. We hope";
+            mailSender.SendMail(email, content);
             return id;
         }
     }

@@ -54,6 +54,7 @@
     <Compile Include="GarageService\GarageServiceRepository\IGarageServiceRepository.cs" />
     <Compile Include="GarageService\GarageServiceRepository\MemoryGarageServiceRepository.cs" />
     <Compile Include="GarageService\GarageServiceUI\GarageServiceUI.cs" />
+    <Compile Include="Integration\MailSenderWithSiganture.cs" />
     <Compile Include="Supply\SupplyControllers\ISupplyController.cs" />
     <Compile Include="Supply\SupplyDomainEntities\AfterMarketPart.cs" />
     <Compile Include="Supply\SupplyDomainEntities\AfterMarketSupplier.cs" />
@@ -108,11 +109,11 @@
     <Compile Include="HR\HRControllers\IHRController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Integration\SendMail.cs" />
+    <Compile Include="Integration\ISendMail.cs" />
     <Compile Include="Supply\SupplyControllers\SimpleSupplyController.cs" />
     <Compile Include="HR\HRControllers\SimpleHRController.cs" />
     <Compile Include="GarageService\GarageServiceControllers\SimpleGarageServiceController.cs" />
-    <Compile Include="Integration\SMTP.cs" />
+    <Compile Include="Integration\SimpleMailSender.cs" />
     <Compile Include="GarageService\GarageServiceControllers\IGarageServiceController.cs" />
     <Compile Include="Supply\SupplyUI\ConsoleSupplyUI.cs" />
   </ItemGroup>

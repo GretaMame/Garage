@@ -17,22 +17,27 @@ namespace Garage_3uzdPSP.GarageService.GarageServiceFacade
         IGarageServiceRepository garageServiceRepository;
         IGarageServiceProvider provider;
         IGarageServiceFactory factory;
+        ISendMail mailSender;
 
         public GarageServiceFacadeWithNotification(ICustomerRepository customerRepository,
             IGarageServiceRepository garageServiceRepository, IGarageServiceProvider provider,
-            IGarageServiceFactory factory)
+            IGarageServiceFactory factory, ISendMail mailSender)
         {
             this.customerRepository = customerRepository;
             this.garageServiceRepository = garageServiceRepository;
             this.provider = provider;
             this.factory = factory;
+            this.mailSender = mailSender;
         }
 
-        public int AddCustomer(string name, string surname)
+        public int AddCustomer(string name, string surname, string email)
         {
-            ICustomer newCustomer = factory.CreateCustomer(name, surname);
+            ICustomer newCustomer = factory.CreateCustomer(name, surname, email);
             int custID = customerRepository.AddCustomer(newCustomer);
             Debug.WriteLine("Customer with ID " + custID + " added to repo from facade");
+            string content = "Congratulations on becoming one of our customers. We hope" +
+                "you will be satisfied with our service.";
+            mailSender.SendMail(email, content);
             return custID;
         }
 
@@ -62,6 +67,9 @@ namespace Garage_3uzdPSP.GarageService.GarageServiceFacade
             }
             provider.WaitingTimeInDays = 3;
             provider.ProvideGarageService(customer, service);
+            string content = "Thank you for using our services. Your waiting time is " +
+                provider.WaitingTimeInDays +" days.";
+            mailSender.SendMail(customer.Email, content);
             return 0;
         }
     }

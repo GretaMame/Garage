@@ -17,9 +17,9 @@ namespace Garage_3uzdPSP.Supply.SupplyDomainEntities
             return new OriginalPart(partNo, manufacturer, supplier);
         }
 
-        public ISupplier CreateSupplier(string name)
+        public ISupplier CreateSupplier(string name, string email)
         {
-            return new OriginalSupplier(name);
+            return new OriginalSupplier(name, email);
         }
     }
 }

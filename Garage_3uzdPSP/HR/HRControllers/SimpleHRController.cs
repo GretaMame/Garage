@@ -26,9 +26,9 @@ namespace Garage_3uzdPSP.HR.HRControllers
             return facade.GenerateWorkseet(id, workedHours, hourlyPay);
         }
 
-        public int HireEmployee(string name, string surname)
+        public int HireEmployee(string name, string surname, string email)
         {
-            return facade.RegisterEmployee(name, surname);
+            return facade.RegisterEmployee(name, surname, email);
         }
     }
 }

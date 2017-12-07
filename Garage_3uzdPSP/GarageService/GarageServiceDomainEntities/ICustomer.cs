@@ -10,6 +10,7 @@ namespace Garage_3uzdPSP.GarageService.GarageServiceDomainEntities
     {
         string Name { get; }
         string Surname { get; }
+        string Email { get; }
         List<IGarageService> GarageServicesProvided { get; set; }
         bool IsEmployee();
     }

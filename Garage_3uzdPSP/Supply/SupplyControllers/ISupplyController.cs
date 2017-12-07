@@ -8,7 +8,7 @@ namespace Garage_3uzdPSP.Supply.SupplyControllers
 {
     interface ISupplyController
     {
-        int RegisterSupplier(string name);
+        int RegisterSupplier(string name, string email);
         int RegisterPart(string partNo, string manufacturer, int supplierID);
         int EvaluateOrderingRisk(int partID);
     }

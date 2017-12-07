@@ -8,7 +8,7 @@ namespace Garage_3uzdPSP.HR.HRFacade
 {
     interface IHRFacade
     {
-        int RegisterEmployee(string name, string surname);
+        int RegisterEmployee(string name, string surname, string email);
         int GenerateWorkseet(int employeeID, int hoursWorked, decimal hourlyPay);
         decimal CalculateSalary(int worksheetID);
     }

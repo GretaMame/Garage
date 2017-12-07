@@ -21,7 +21,9 @@ namespace Gargage_3uzdPSP.Supply.SupplyUI
             Console.WriteLine("--SUPPLIER REGISTRATION--");
             Console.WriteLine("Please enter supplier name:");
             string name = Console.ReadLine();
-            int id = controller.RegisterSupplier(name);
+            Console.WriteLine("Please enter supplier email:");
+            string email = Console.ReadLine();
+            int id = controller.RegisterSupplier(name, email);
             Console.WriteLine("Supplier " + name + "  successfully added with ID " + id);
         }
 

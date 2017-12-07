@@ -41,9 +41,9 @@ namespace Garage_3uzdPSP.Facade
             return id;
         }
 
-        public int AddSupplier(string name)
+        public int AddSupplier(string name, string email)
         {
-            ISupplier supplier = factory.CreateSupplier(name);
+            ISupplier supplier = factory.CreateSupplier(name, email);
             int id = supplierRepository.AddSupplier(supplier);
             Debug.WriteLine("Supplier with ID " + id + " added to repo from facade");
             return id;

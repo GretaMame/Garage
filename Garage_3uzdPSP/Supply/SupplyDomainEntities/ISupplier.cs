@@ -9,6 +9,7 @@ namespace Garage_3uzdPSP.Supply.SupplyDomainEntities
     interface ISupplier
     {
         string Name { get; }
+        string Email { get; }
         bool IsReliable();
 
     }

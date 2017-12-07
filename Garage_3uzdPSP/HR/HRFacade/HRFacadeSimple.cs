@@ -53,9 +53,9 @@ namespace Garage_3uzdPSP.HR.HRFacade
             return payCalculator.calculatePay(worksheet);
         }
 
-        public int RegisterEmployee(string name, string surname)
+        public int RegisterEmployee(string name, string surname, string email)
         {
-            IEmployee employee = factory.CreateEmployee(name, surname);
+            IEmployee employee = factory.CreateEmployee(name, surname, email);
             int id = employeeRepository.AddEmployee(employee);
             Debug.WriteLine("Employee with ID " + id + " added to repo from facade");
             return id;

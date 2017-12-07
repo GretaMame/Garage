@@ -8,7 +8,7 @@ namespace Garage_3uzdPSP.HR.HRControllers
 {
     interface IHRController
     {
-        int HireEmployee(string name, string surname);
+        int HireEmployee(string name, string surname, string email);
         int GenerateWorkSheet(int id, int workedHours, decimal hourlyPay);
         decimal PaySalary(int sheetID);
     }

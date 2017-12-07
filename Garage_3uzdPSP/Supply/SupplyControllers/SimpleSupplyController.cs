@@ -26,9 +26,9 @@ namespace Garage_3uzdPSP.Supply.SupplyControllers
             return facade.AddPart(supplierID, partNo, manufacturer);
         }
 
-        public int RegisterSupplier(string name)
+        public int RegisterSupplier(string name, string email)
         {
-            return facade.AddSupplier(name);
+            return facade.AddSupplier(name, email);
         }
     }
 }

@@ -38,7 +38,9 @@ namespace Gargage_3uzdPSP.GarageService.GarageServiceUI
             string name = Console.ReadLine();
             Console.WriteLine("Please enter customer surname:");
             string surname = Console.ReadLine();
-            int id = controller.AddCustomer(name, surname);
+            Console.WriteLine("Please enter customer email:");
+            string email = Console.ReadLine();
+            int id = controller.AddCustomer(name, surname, email);
             Console.WriteLine("Customer " + name + " " + surname + " successfully added with ID " + id);
         }
 

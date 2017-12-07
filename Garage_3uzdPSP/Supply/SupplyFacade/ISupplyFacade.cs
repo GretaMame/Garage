@@ -9,7 +9,7 @@ namespace Garage_3uzdPSP.Facade
 {
     interface ISupplyFacade
     {
-        int AddSupplier(string name);
+        int AddSupplier(string name, string email);
         int AddPart(int supplierID, string partNumber,string manufacturer);
         int EvaluteRisk(int partID);
     }

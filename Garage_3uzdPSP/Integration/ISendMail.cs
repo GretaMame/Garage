@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Garage_3uzdPSP
 {
-    class SMTP : SendMail
+    interface ISendMail
     {
-
+        void SendMail(string emailAddress, string text);
     }
 }

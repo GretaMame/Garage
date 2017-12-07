@@ -23,7 +23,9 @@ namespace Gargage_3uzdPSP.HR.HRUI
             string name = Console.ReadLine();
             Console.WriteLine("Please enter employee surname:");
             string surname = Console.ReadLine();
-            int id = controller.HireEmployee(name, surname);
+            Console.WriteLine("Please enter employee email:");
+            string email = Console.ReadLine();
+            int id = controller.HireEmployee(name, surname, email);
             Console.WriteLine("Employee "+name+" "+ surname+" successfully added with ID "+id);
         }
 

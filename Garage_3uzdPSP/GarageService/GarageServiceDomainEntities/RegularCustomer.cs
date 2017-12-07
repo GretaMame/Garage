@@ -12,12 +12,15 @@ namespace Garage_3uzdPSP.GarageService.GarageServiceDomainEntities
 
         public string Surname { get; }
 
+        public string Email { get; }
+
         public List<IGarageService> GarageServicesProvided { get; set; }
 
-        public RegularCustomer(string name, string surname)
+        public RegularCustomer(string name, string surname, string email)
         {
             Name = name;
             Surname = surname;
+            Email = email;
             GarageServicesProvided = new List<IGarageService>();
         }
 
