@@ -81,6 +81,20 @@ namespace Garage_3uzdPSP.UnityContainerConfig
 
         static UnityContainer FirstConfiguration()
         {
+            //Simple Mail
+
+            //Regular customer family
+            //Regular service provider
+            //Facade with notification
+
+            //Fulltime employee family
+            //Bonus Pay calculator
+            //Facade with notification
+
+            //AfterMarket supply family
+            //Small amount risk calculator
+            //facde simple
+
             var container = new UnityContainer();
 
             container.RegisterType<GarageService.GarageServiceControllers.IGarageServiceController, GarageService.GarageServiceControllers.GarageServiceController>();
@@ -117,6 +131,20 @@ namespace Garage_3uzdPSP.UnityContainerConfig
 
         static UnityContainer SecondConfiguration()
         {
+            //Mail with signature
+
+            //Employee Service Family
+            //No Waiting Line Service
+            //Simple fasade
+
+            //part time employer family
+            //SimplePay calculator
+            //SimpleFacade
+
+            //Original part Family
+            //Big Amount calculator
+            //Facde with notification
+
             var container = new UnityContainer();
 
             container.RegisterType<GarageService.GarageServiceControllers.IGarageServiceController, GarageService.GarageServiceControllers.GarageServiceController>();
@@ -127,7 +155,6 @@ namespace Garage_3uzdPSP.UnityContainerConfig
             container.RegisterType<GarageService.GarageServiceFacade.IGarageServiceFacade, GarageService.GarageServiceFacade.GarageServiceFacadeSimple>();
             container.RegisterType<GarageService.GarageServiceRepository.ICustomerRepository, GarageService.GarageServiceRepository.MemoryCustomerRepository>();
             container.RegisterType<GarageService.GarageServiceRepository.IGarageServiceRepository, GarageService.GarageServiceRepository.MemoryGarageServiceRepository>();
-            container.RegisterType<GarageService.GarageServiceUI.ConsoleGarageServiceUI>();
             container.RegisterType<Integration.ISendMail, Integration.MailSenderWithSiganture>();
 
             container.RegisterType<HR.HRControllers.IHRController, HR.HRControllers.SimpleHRController>();
