@@ -93,21 +93,12 @@ namespace Garage_3uzdPSP.UnityContainerConfig
             container.RegisterType<GarageService.GarageServiceRepository.IGarageServiceRepository, GarageService.GarageServiceRepository.MemoryGarageServiceRepository>();
             container.RegisterType<Integration.ISendMail, Integration.SimpleMailSender>();
 
-            //container.RegisterType<HR.HRControllers.IHRController, HR.HRControllers.SimpleHRController>();
-            //container.RegisterType<HR.HRDomainEntities.IEmployee, HR.HRDomainEntities.FullTimeEmployee>();
-            //container.RegisterType<HR.HRDomainEntities.IWorkSheet, HR.HRDomainEntities.FullTimeWorkSheet>();
-            //container.RegisterType<HR.HRDomainEntities.IHRFactory, HR.HRDomainEntities.FullTimeHRFactory>();
-            //container.RegisterType<HR.HRDomainServices.IPayCalculator, HR.HRDomainServices.BonusPayCalculator>();
-            //container.RegisterType<HR.HRFacade.IHRFacade, HR.HRFacade.HRFacadeWithNotification>();
-            //container.RegisterType<HR.HRRepository.IEmployeeRepository, HR.HRRepository.MemoryEmployeeRepository>();
-            //container.RegisterType<HR.HRRepository.IWorkSheetRepository, HR.HRRepository.MemoryWorkSheetRepository>();
-
             container.RegisterType<HR.HRControllers.IHRController, HR.HRControllers.SimpleHRController>();
-            container.RegisterType<HR.HRDomainEntities.IEmployee, HR.HRDomainEntities.PartTimeEmployee>();
-            container.RegisterType<HR.HRDomainEntities.IWorkSheet, HR.HRDomainEntities.PartTimeWorkSheet>();
-            container.RegisterType<HR.HRDomainEntities.IHRFactory, HR.HRDomainEntities.PartTimeHRFactory>();
-            container.RegisterType<HR.HRDomainServices.IPayCalculator, HR.HRDomainServices.SimplePayCalculator>();
-            container.RegisterType<HR.HRFacade.IHRFacade, HR.HRFacade.HRFacadeSimple>();
+            container.RegisterType<HR.HRDomainEntities.IEmployee, HR.HRDomainEntities.FullTimeEmployee>();
+            container.RegisterType<HR.HRDomainEntities.IWorkSheet, HR.HRDomainEntities.FullTimeWorkSheet>();
+            container.RegisterType<HR.HRDomainEntities.IHRFactory, HR.HRDomainEntities.FullTimeHRFactory>();
+            container.RegisterType<HR.HRDomainServices.IPayCalculator, HR.HRDomainServices.BonusPayCalculator>();
+            container.RegisterType<HR.HRFacade.IHRFacade, HR.HRFacade.HRFacadeWithNotification>();
             container.RegisterType<HR.HRRepository.IEmployeeRepository, HR.HRRepository.MemoryEmployeeRepository>();
             container.RegisterType<HR.HRRepository.IWorkSheetRepository, HR.HRRepository.MemoryWorkSheetRepository>();
 
@@ -147,23 +138,13 @@ namespace Garage_3uzdPSP.UnityContainerConfig
             container.RegisterType<HR.HRFacade.IHRFacade, HR.HRFacade.HRFacadeSimple>();
             container.RegisterType<HR.HRRepository.IEmployeeRepository, HR.HRRepository.MemoryEmployeeRepository>();
             container.RegisterType<HR.HRRepository.IWorkSheetRepository, HR.HRRepository.MemoryWorkSheetRepository>();
-           
-
-            //container.RegisterType<Supply.SupplyControllers.ISupplyController, Supply.SupplyControllers.SimpleSupplyController>();
-            //container.RegisterType<Supply.SupplyDomainEntities.IPart, Supply.SupplyDomainEntities.OriginalPart>();
-            //container.RegisterType<Supply.SupplyDomainEntities.ISupplier, Supply.SupplyDomainEntities.OriginalSupplier>();
-            //container.RegisterType<Supply.SupplyDomainEntities.ISupplyFactory, Supply.SupplyDomainEntities.OriginalSupplyFactory>();
-            //container.RegisterType<Supply.SupplyDomainServices.IOrderingRiskEvaluator, Supply.SupplyDomainServices.BigAmountOrderRiskRateEvaluator>();
-            //container.RegisterType<Supply.SupplyFacade.ISupplyFacade, Supply.SupplyFacade.SupplyFacadeWithNotification>();
-            //container.RegisterType<Supply.SupplyRepository.IPartRepository, Supply.SupplyRepository.MemoryPartRepository>();
-            //container.RegisterType<Supply.SupplyRepository.ISupplierRepository, Supply.SupplyRepository.MemorySupplierRepository>();
 
             container.RegisterType<Supply.SupplyControllers.ISupplyController, Supply.SupplyControllers.SimpleSupplyController>();
-            container.RegisterType<Supply.SupplyDomainEntities.IPart, Supply.SupplyDomainEntities.AfterMarketPart>();
-            container.RegisterType<Supply.SupplyDomainEntities.ISupplier, Supply.SupplyDomainEntities.AfterMarketSupplier>();
-            container.RegisterType<Supply.SupplyDomainEntities.ISupplyFactory, Supply.SupplyDomainEntities.AfterMarketSupplyFactory>();
-            container.RegisterType<Supply.SupplyDomainServices.IOrderingRiskEvaluator, Supply.SupplyDomainServices.SmallAmountOrderRiskRateEvaluator>();
-            container.RegisterType<Supply.SupplyFacade.ISupplyFacade, Supply.SupplyFacade.SupplyFacadeSimple>();
+            container.RegisterType<Supply.SupplyDomainEntities.IPart, Supply.SupplyDomainEntities.OriginalPart>();
+            container.RegisterType<Supply.SupplyDomainEntities.ISupplier, Supply.SupplyDomainEntities.OriginalSupplier>();
+            container.RegisterType<Supply.SupplyDomainEntities.ISupplyFactory, Supply.SupplyDomainEntities.OriginalSupplyFactory>();
+            container.RegisterType<Supply.SupplyDomainServices.IOrderingRiskEvaluator, Supply.SupplyDomainServices.BigAmountOrderRiskRateEvaluator>();
+            container.RegisterType<Supply.SupplyFacade.ISupplyFacade, Supply.SupplyFacade.SupplyFacadeWithNotification>();
             container.RegisterType<Supply.SupplyRepository.IPartRepository, Supply.SupplyRepository.MemoryPartRepository>();
             container.RegisterType<Supply.SupplyRepository.ISupplierRepository, Supply.SupplyRepository.MemorySupplierRepository>();
             container.RegisterType<Supply.SupplyUI.ISupplyUI, Supply.SupplyUI.ConsoleSupplyUI>();

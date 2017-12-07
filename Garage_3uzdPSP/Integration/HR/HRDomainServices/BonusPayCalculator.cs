@@ -9,15 +9,10 @@ namespace Garage_3uzdPSP.HR.HRDomainServices
 {
     class BonusPayCalculator : IPayCalculator
     {
-        decimal Bonus { get; set; }
 
-        public BonusPayCalculator(decimal bonus)
-        {
-            Bonus = bonus;
-        }
         public decimal calculatePay(IWorkSheet workSheet)
         {
-            return workSheet.HourlyPay * workSheet.HoursWorked + Bonus;
+            return workSheet.HourlyPay * workSheet.HoursWorked + 200;
         }
     }
 }
