@@ -53,7 +53,7 @@
     <Compile Include="GarageService\GarageServiceDomainServices\RegularGarageServiceProvider.cs" />
     <Compile Include="GarageService\GarageServiceRepository\IGarageServiceRepository.cs" />
     <Compile Include="GarageService\GarageServiceRepository\MemoryGarageServiceRepository.cs" />
-    <Compile Include="GarageService\GarageServiceUI\GarageServiceUI.cs" />
+    <Compile Include="GarageService\GarageServiceUI\ConsoleGarageServiceUI.cs" />
     <Compile Include="Integration\MailSenderWithSiganture.cs" />
     <Compile Include="Supply\SupplyControllers\ISupplyController.cs" />
     <Compile Include="Supply\SupplyDomainEntities\AfterMarketPart.cs" />
@@ -107,7 +107,7 @@
     <Compile Include="HR\HRRepository\IWorkSheetRepository.cs" />
     <Compile Include="Supply\SupplyRepository\ISupplierRepository.cs" />
     <Compile Include="HR\HRControllers\IHRController.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="UnityContainerConfig\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Integration\ISendMail.cs" />
     <Compile Include="Supply\SupplyControllers\SimpleSupplyController.cs" />
@@ -118,7 +118,7 @@
     <Compile Include="Supply\SupplyUI\ConsoleSupplyUI.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="UnityContainerConfig\App.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Gargage_3uzdPSP.GarageService.GarageServiceUI
 {
-    class GarageServiceUI
+    class ConsoleGarageServiceUI
     {
         IGarageServiceController controller;
 
-        public GarageServiceUI(IGarageServiceController cntrl)
+        public ConsoleGarageServiceUI(IGarageServiceController cntrl)
         {
             controller = cntrl;
         }
