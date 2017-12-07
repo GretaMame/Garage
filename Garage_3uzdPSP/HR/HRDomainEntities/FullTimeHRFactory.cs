@@ -8,7 +8,7 @@ namespace Garage_3uzdPSP.HR.HRDomainEntities
 {
     class FullTimeHRFactory : IHRFactory
     {
-        public IEmployee CreateEmployee(string name, string surname, DateTime dateOfBirth)
+        public IEmployee CreateEmployee(string name, string surname)
         {
             return new FullTimeEmployee(name, surname);
         }

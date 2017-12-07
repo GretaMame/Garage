@@ -8,7 +8,7 @@ namespace Garage_3uzdPSP.HR.HRDomainEntities
 {
     class PartTimeHRFactory : IHRFactory
     {
-        public IEmployee CreateEmployee(string name, string surname, DateTime dateOfBirth)
+        public IEmployee CreateEmployee(string name, string surname)
         {
             return new PartTimeEmployee(name, surname);
         }
