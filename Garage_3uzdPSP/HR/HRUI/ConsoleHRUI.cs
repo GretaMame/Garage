@@ -42,6 +42,7 @@ namespace Gargage_3uzdPSP.HR.HRUI
             {
                 Console.WriteLine("Please enter correct amount of hours");
             }
+            Console.WriteLine("Please enter hourly pay:");
             decimal pay;
             while (!Decimal.TryParse(Console.ReadLine(), out pay))
             {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Garage_3uzdPSP.GarageService.GarageServiceDomainEntities
 {
-    class EmployeeGarageService
+    class EmployeeGarageService : IGarageService
     {
         public string Name { get; }
         public decimal Price { private get; set; }

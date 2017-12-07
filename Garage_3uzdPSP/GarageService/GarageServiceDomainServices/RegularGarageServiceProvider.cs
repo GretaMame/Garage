@@ -10,12 +10,7 @@ namespace Gargage_3uzdPSP.GarageService.GarageServiceDomainServices
 {
     class RegularGarageServiceProvider : IGarageServiceProvider
     {
-        public int WaitingTimeInDays { get; private set; }
-
-        public RegularGarageServiceProvider(int days)
-        {
-            WaitingTimeInDays = days;
-        }
+        public int WaitingTimeInDays { get; set; }
 
         public void ProvideGarageService(ICustomer customer, IGarageService service)
         {

@@ -8,7 +8,7 @@ namespace Garage_3uzdPSP.GarageService.GarageServiceDomainEntities
 {
     interface IGarageServiceFactory
     {
-        ICustomer createCustomer();
-        IGarageService createService();
+        ICustomer CreateCustomer(string name, string surname);
+        IGarageService CreateService(string name, decimal price);
     }
 }

@@ -44,8 +44,10 @@
   <ItemGroup>
     <Compile Include="GarageService\GarageServiceDomainEntities\EmployeeCustomer.cs" />
     <Compile Include="GarageService\GarageServiceDomainEntities\EmployeeGarageService.cs" />
+    <Compile Include="GarageService\GarageServiceDomainEntities\EmployeeGarageServiceFactory.cs" />
     <Compile Include="GarageService\GarageServiceDomainEntities\RegularCustomer.cs" />
     <Compile Include="GarageService\GarageServiceDomainEntities\RegularGarageService.cs" />
+    <Compile Include="GarageService\GarageServiceDomainEntities\RegularGarageServiceFactory.cs" />
     <Compile Include="GarageService\GarageServiceDomainServices\NoWaitingLineGarageServiceProvider.cs" />
     <Compile Include="GarageService\GarageServiceDomainServices\IGarageServiceProvider.cs" />
     <Compile Include="GarageService\GarageServiceDomainServices\RegularGarageServiceProvider.cs" />
@@ -77,7 +79,7 @@
     <Compile Include="HR\HRFacade\IHRFacade.cs" />
     <Compile Include="HR\HRFacade\HRFacadeSimple.cs" />
     <Compile Include="HR\HRFacade\HRFacadeWithNotification.cs" />
-    <Compile Include="GarageService\GarageServiceFacade\GarageServiceFacade.cs" />
+    <Compile Include="GarageService\GarageServiceFacade\IGarageServiceFacade.cs" />
     <Compile Include="GarageService\GarageServiceFacade\GarageServiceFacadeSimple.cs" />
     <Compile Include="GarageService\GarageServiceFacade\GarageServiceFacadeWithNotification.cs" />
     <Compile Include="Supply\SupplyDomainServices\BigAmountOrderRiskRateEvaluator.cs" />
@@ -109,9 +111,9 @@
     <Compile Include="Integration\SendMail.cs" />
     <Compile Include="Supply\SupplyControllers\SimpleSupplyController.cs" />
     <Compile Include="HR\HRControllers\SimpleHRController.cs" />
-    <Compile Include="GarageService\GarageServiceControllers\SimpleSupplyController.cs" />
+    <Compile Include="GarageService\GarageServiceControllers\SimpleGarageServiceController.cs" />
     <Compile Include="Integration\SMTP.cs" />
-    <Compile Include="GarageService\GarageServiceControllers\SupplyController.cs" />
+    <Compile Include="GarageService\GarageServiceControllers\IGarageServiceController.cs" />
     <Compile Include="Supply\SupplyUI\ConsoleSupplyUI.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -9,7 +9,7 @@ namespace Gargage_3uzdPSP.GarageService.GarageServiceDomainServices
 {
     interface IGarageServiceProvider
     {
-        int WaitingTimeInDays { get; }
+        int WaitingTimeInDays { get; set; }
         void ProvideGarageService(ICustomer customer, IGarageService service);
     }
 }

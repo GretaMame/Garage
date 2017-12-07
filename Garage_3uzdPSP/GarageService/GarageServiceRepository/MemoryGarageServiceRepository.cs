@@ -18,7 +18,7 @@ namespace Gargage_3uzdPSP.GarageService.GarageServiceRepository
             services = new Dictionary<int, IGarageService>();
         }
 
-        public int AddEmployee(IGarageService service)
+        public int AddGarageService(IGarageService service)
         {
             services.Add(id, service);
             int serviceId = id;
@@ -27,7 +27,7 @@ namespace Gargage_3uzdPSP.GarageService.GarageServiceRepository
             return serviceId;
         }
 
-        public IGarageService GetEmployee(int id)
+        public IGarageService GetGarageService(int id)
         {
             if (services.ContainsKey(id))
             {

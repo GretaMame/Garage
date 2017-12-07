@@ -18,6 +18,7 @@ namespace Garage_3uzdPSP.GarageService.GarageServiceDomainEntities
         {
             Name = name;
             Surname = surname;
+            GarageServicesProvided = new List<IGarageService>();
         }
 
         public bool IsEmployee()
