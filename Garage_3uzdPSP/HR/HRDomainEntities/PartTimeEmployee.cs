@@ -21,7 +21,6 @@ namespace Garage_3uzdPSP.HR.HRDomainEntities
             Name = name;
             Surname = surname;
             Email = email;
-            DateOfEmployment = DateTime.Today;
         }
 
         public bool GetsBenefits()

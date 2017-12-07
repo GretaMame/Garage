@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Garage_3uzdPSP.HR.HRDomainEntities;
 
-namespace Gargage_3uzdPSP.HR.HRDomainServices
+namespace Garage_3uzdPSP.HR.HRDomainServices
 {
     class BonusPayCalculator : IPayCalculator
     {

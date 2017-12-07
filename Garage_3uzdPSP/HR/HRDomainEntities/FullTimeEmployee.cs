@@ -12,8 +12,6 @@ namespace Garage_3uzdPSP.HR.HRDomainEntities
 
         public string Surname { get; }
 
-        public DateTime DateOfEmployment { get; }
-
         public string Email { get; }
 
         public FullTimeEmployee(string name, string surname, string email)
@@ -21,7 +19,6 @@ namespace Garage_3uzdPSP.HR.HRDomainEntities
             Name = name;
             Surname = surname;
             Email = email;
-            DateOfEmployment = DateTime.Today;
         }
 
         public bool GetsBenefits()

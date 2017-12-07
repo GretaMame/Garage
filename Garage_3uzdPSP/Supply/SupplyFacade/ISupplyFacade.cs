@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Garage_3uzdPSP.Facade
+namespace Garage_3uzdPSP.Supply.SupplyFacade
 {
     interface ISupplyFacade
     {

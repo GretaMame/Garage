@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gargage_3uzdPSP.Supply.SupplyDomainServices
+namespace Garage_3uzdPSP.Supply.SupplyDomainServices
 {
     class BigAmountOrderRiskRateEvaluator : IOrderingRiskEvaluator
     {

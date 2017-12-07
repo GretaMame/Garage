@@ -1,12 +1,13 @@
 ﻿using Garage_3uzdPSP.HR.HRDomainEntities;
 using Garage_3uzdPSP.HR.HRRepository;
-using Gargage_3uzdPSP.HR.HRDomainServices;
+using Garage_3uzdPSP.HR.HRDomainServices;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Garage_3uzdPSP.Integration;
 
 namespace Garage_3uzdPSP.HR.HRFacade
 {

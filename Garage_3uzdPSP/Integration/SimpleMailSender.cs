@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Garage_3uzdPSP
+namespace Garage_3uzdPSP.Integration
 {
     class SimpleMailSender : ISendMail
     {

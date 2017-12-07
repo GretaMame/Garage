@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gargage_3uzdPSP.HR.HRDomainServices
+namespace Garage_3uzdPSP.HR.HRDomainServices
 {
     class BussinesTripProvider : IBenefitsProvider
     {

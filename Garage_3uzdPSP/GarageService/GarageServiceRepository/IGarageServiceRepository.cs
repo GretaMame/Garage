@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gargage_3uzdPSP.GarageService.GarageServiceRepository
+namespace Garage_3uzdPSP.GarageService.GarageServiceRepository
 {
     interface IGarageServiceRepository
     {

@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gargage_3uzdPSP.Supply.SupplyUI
+namespace Garage_3uzdPSP.Supply.SupplyUI
 {
-    class ConsoleSupplyUI
+    class ConsoleSupplyUI : ISupplyUI
     {
         ISupplyController controller;
 
@@ -36,9 +36,10 @@ namespace Gargage_3uzdPSP.Supply.SupplyUI
             string manufacturer = Console.ReadLine();
             Console.WriteLine("Please enter supplier id:");
             int id;
-            while (!Int32.TryParse(Console.ReadLine(), out id))
+            while (!(Int32.TryParse(Console.ReadLine(), out id)))
             {
                 Console.WriteLine("Please enter correct ID");
+                Console.ReadLine();
             }
             int partID = controller.RegisterPart(partNo, manufacturer, id);
             Console.WriteLine("Part successfully added with ID " + partID);
@@ -49,9 +50,10 @@ namespace Gargage_3uzdPSP.Supply.SupplyUI
             Console.WriteLine("--ORDERING RISK EVALUATION--");
             Console.WriteLine("Please enter part id:");
             int id;
-            while (!Int32.TryParse(Console.ReadLine(), out id))
+            while (!(Int32.TryParse(Console.ReadLine(), out id)))
             {
                 Console.WriteLine("Please enter correct ID");
+                Console.ReadLine();
             }
             int risk = controller.EvaluateOrderingRisk(id);
             Console.WriteLine("Ordering part with ID "+id+"has a risk rate of "+risk);

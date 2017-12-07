@@ -1,6 +1,6 @@
 ﻿using Garage_3uzdPSP.HR.HRDomainEntities;
 using Garage_3uzdPSP.HR.HRRepository;
-using Gargage_3uzdPSP.HR.HRDomainServices;
+using Garage_3uzdPSP.HR.HRDomainServices;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gargage_3uzdPSP.HR.HRUI
+namespace Garage_3uzdPSP.HR.HRUI
 {
-    class ConsoleHRUI
+    class ConsoleHRUI : IHRUI
     {
         IHRController controller;
 
@@ -34,21 +34,24 @@ namespace Gargage_3uzdPSP.HR.HRUI
             Console.WriteLine("--NEW WORKSHEET GENERATION--");
             Console.WriteLine("Please enter employee id:");
             int id;
-            while(!Int32.TryParse(Console.ReadLine(), out id))
+            while(!(Int32.TryParse(Console.ReadLine(), out id)))
             {
                 Console.WriteLine("Please enter correct ID");
+                Console.ReadLine();
             }
             Console.WriteLine("Please enter hours worked:");
             int hours;
-            while (!Int32.TryParse(Console.ReadLine(), out hours))
+            while (!(Int32.TryParse(Console.ReadLine(), out hours)))
             {
                 Console.WriteLine("Please enter correct amount of hours");
+                Console.ReadLine();
             }
             Console.WriteLine("Please enter hourly pay:");
             decimal pay;
-            while (!Decimal.TryParse(Console.ReadLine(), out pay))
+            while (!(Decimal.TryParse(Console.ReadLine(), out pay)))
             {
                 Console.WriteLine("Please enter correct pay");
+                Console.ReadLine();
             }
 
             int workSheetID = controller.GenerateWorkSheet(id, hours, pay);

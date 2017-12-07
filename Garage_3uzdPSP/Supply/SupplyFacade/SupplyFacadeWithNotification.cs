@@ -1,14 +1,15 @@
 ﻿using Garage_3uzdPSP.Supply.SupplyDomainEntities;
 using Garage_3uzdPSP.Supply.SupplyRepository;
-using Gargage_3uzdPSP.Supply.SupplyDomainServices;
+using Garage_3uzdPSP.Supply.SupplyDomainServices;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Garage_3uzdPSP.Integration;
 
-namespace Garage_3uzdPSP.Facade
+namespace Garage_3uzdPSP.Supply.SupplyFacade
 {
     class SupplyFacadeWithNotification : ISupplyFacade
     {
