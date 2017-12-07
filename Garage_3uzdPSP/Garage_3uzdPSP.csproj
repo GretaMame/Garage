@@ -42,6 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GarageService\GarageServiceDomainEntities\EmployeeCustomer.cs" />
+    <Compile Include="GarageService\GarageServiceDomainEntities\EmployeeGarageService.cs" />
+    <Compile Include="GarageService\GarageServiceDomainEntities\RegularCustomer.cs" />
+    <Compile Include="GarageService\GarageServiceDomainEntities\RegularGarageService.cs" />
+    <Compile Include="GarageService\GarageServiceDomainServices\NoWaitingLineGarageServiceProvider.cs" />
+    <Compile Include="GarageService\GarageServiceDomainServices\IGarageServiceProvider.cs" />
+    <Compile Include="GarageService\GarageServiceDomainServices\RegularGarageServiceProvider.cs" />
     <Compile Include="GarageService\GarageServiceUI\GarageServiceUI.cs" />
     <Compile Include="Supply\SupplyControllers\ISupplyController.cs" />
     <Compile Include="Supply\SupplyDomainEntities\AfterMarketPart.cs" />
