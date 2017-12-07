@@ -9,6 +9,6 @@ namespace Garage_3uzdPSP.Supply.SupplyDomainEntities
     interface ISupplyFactory
     {
         ISupplier createSupplier();
-        IPart createPart();
+        IPart createPart(string partNo, string manufacturer, ISupplier supplier);
     }
 }

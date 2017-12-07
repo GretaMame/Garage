@@ -8,9 +8,9 @@ namespace Garage_3uzdPSP.Supply.SupplyDomainEntities
 {
     class AfterMarketSupplyFactory : ISupplyFactory
     {
-        public IPart createPart()
+        public IPart createPart(string partNo, string manufacturer, ISupplier supplier)
         {
-            throw new NotImplementedException();
+            return new AfterMarketPart(partNo, manufacturer, supplier);
         }
 
         public ISupplier createSupplier()

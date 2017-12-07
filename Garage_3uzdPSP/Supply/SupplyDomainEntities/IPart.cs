@@ -8,5 +8,9 @@ namespace Garage_3uzdPSP.Supply.SupplyDomainEntities
 {
     interface IPart
     {
+        ISupplier Supplier { get; }
+        string PartNumber { get; }
+        string Manufacturer { get; }
+        decimal Price { get; }
     }
 }

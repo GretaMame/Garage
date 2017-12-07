@@ -8,5 +8,16 @@ namespace Garage_3uzdPSP.Supply.SupplyDomainEntities
 {
     class AfterMarketSupplier : ISupplier
     {
+        public string Name { get; }
+
+        public AfterMarketSupplier(string name)
+        {
+            Name = name;
+        }
+
+        public bool IsReliable()
+        {
+            return false;
+        }
     }
 }

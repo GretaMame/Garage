@@ -88,9 +88,9 @@
     <Compile Include="Supply\SupplyRepository\MemoryPartRepository.cs" />
     <Compile Include="HR\HRRepository\MemoryWorkSheetRepository.cs" />
     <Compile Include="Supply\SupplyRepository\MemorySupplierRepository.cs" />
-    <Compile Include="Supply\SupplyRepository\PartRepository.cs" />
+    <Compile Include="Supply\SupplyRepository\IPartRepository.cs" />
     <Compile Include="HR\HRRepository\IWorkSheetRepository.cs" />
-    <Compile Include="Supply\SupplyRepository\SupplierRepository.cs" />
+    <Compile Include="Supply\SupplyRepository\ISupplierRepository.cs" />
     <Compile Include="HR\HRControllers\IHRController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -105,6 +105,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Supply\SupplyDomainServices\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

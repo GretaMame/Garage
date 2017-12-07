@@ -12,9 +12,9 @@ namespace Garage_3uzdPSP.Supply.SupplyDomainEntities
         {
         }
 
-        public IPart createPart()
+        public IPart createPart(string partNo, string manufacturer, ISupplier supplier)
         {
-            throw new NotImplementedException();
+            return new OriginalPart(partNo, manufacturer, supplier);
         }
 
         public ISupplier createSupplier()
