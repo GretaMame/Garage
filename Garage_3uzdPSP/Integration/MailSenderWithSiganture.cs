@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Garage_3uzdPSP.Integration
 {
-    class MailSenderWithSiganture : ISendMail
+    class MailSenderWithSiganture : Integration.ISendMail
     {
         public void SendMail(string emailAddress, string content)
         {

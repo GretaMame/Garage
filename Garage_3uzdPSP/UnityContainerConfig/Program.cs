@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Unity;
+using Unity.Injection;
 
 namespace Garage_3uzdPSP.UnityContainerConfig
 {
@@ -14,7 +15,7 @@ namespace Garage_3uzdPSP.UnityContainerConfig
     {
         static void Main(string[] args)
         {
-            UnityContainer container = SecondConfiguration();
+            UnityContainer container = FirstConfiguration();
             ConsoleGarageServiceUI garageUI = new ConsoleGarageServiceUI(container.Resolve<GarageService.GarageServiceControllers.IGarageServiceController>());
             ConsoleSupplyUI supplyUI = new ConsoleSupplyUI(container.Resolve<Supply.SupplyControllers.ISupplyController>());
             ConsoleHRUI hrUI = new ConsoleHRUI(container.Resolve<HR.HRControllers.IHRController>());
@@ -81,16 +82,20 @@ namespace Garage_3uzdPSP.UnityContainerConfig
 
         static UnityContainer FirstConfiguration()
         {
+            //INTEGRATION
             //Simple Mail
 
+            //GARAGE SERVICE
             //Regular customer family
             //Regular service provider
             //Facade with notification
 
+            //HUMAN RESOURCES
             //Fulltime employee family
             //Bonus Pay calculator
             //Facade with notification
 
+            //SUPPLY
             //AfterMarket supply family
             //Small amount risk calculator
             //facde simple
@@ -131,16 +136,20 @@ namespace Garage_3uzdPSP.UnityContainerConfig
 
         static UnityContainer SecondConfiguration()
         {
+            //INTEGRATION  
             //Mail with signature
 
+            //GARAGE SERVICE
             //Employee Service Family
             //No Waiting Line Service
             //Simple fasade
 
+            //HUMAN RESOURCES
             //part time employer family
             //SimplePay calculator
             //SimpleFacade
 
+            //SUPPLY
             //Original part Family
             //Big Amount calculator
             //Facde with notification

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Unity.Attributes;
 
 namespace Garage_3uzdPSP.Supply.SupplyDomainServices
 {
@@ -14,6 +15,7 @@ namespace Garage_3uzdPSP.Supply.SupplyDomainServices
         {
             rate = 5;
         }
+
         public int EvaluateOrderingRiskRate(IPart part)
         {
             if (part.Supplier.IsReliable())

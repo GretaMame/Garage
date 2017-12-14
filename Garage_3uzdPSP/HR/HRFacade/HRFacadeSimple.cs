@@ -50,7 +50,7 @@ namespace Garage_3uzdPSP.HR.HRFacade
                 Console.WriteLine("Worksheet with entered ID not found");
                 return -1m;
             }
-            return payCalculator.calculatePay(worksheet);
+            return payCalculator.CalculatePay(worksheet);
         }
 
         public int RegisterEmployee(string name, string surname, string email)

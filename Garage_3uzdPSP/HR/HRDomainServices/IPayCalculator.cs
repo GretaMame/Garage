@@ -9,6 +9,6 @@ namespace Garage_3uzdPSP.HR.HRDomainServices
 {
     interface IPayCalculator
     {
-        decimal calculatePay(IWorkSheet worksheet);
+        decimal CalculatePay(IWorkSheet worksheet);
     }
 }

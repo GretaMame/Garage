@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Garage_3uzdPSP.HR.HRUI
 {
-    class ConsoleHRUI : IHRUI
+    class ConsoleHRUI
     {
         IHRController controller;
 

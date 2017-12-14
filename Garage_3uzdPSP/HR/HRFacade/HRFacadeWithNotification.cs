@@ -55,7 +55,7 @@ namespace Garage_3uzdPSP.HR.HRFacade
                 Console.WriteLine("Worksheet with entered ID not found");
                 return -1m;
             }
-            decimal salary = payCalculator.calculatePay(worksheet);
+            decimal salary = payCalculator.CalculatePay(worksheet);
             string content = "Below is your payroll info.\nWorksheet date: " + worksheet.WorkSheetDate +
                 "\nSalary: "+salary;
             mailSender.SendMail(worksheet.employee.Email, content);
@@ -68,7 +68,7 @@ namespace Garage_3uzdPSP.HR.HRFacade
             IEmployee employee = factory.CreateEmployee(name, surname, email);
             int id = employeeRepository.AddEmployee(employee);
             Debug.WriteLine("Employee with ID " + id + " added to repo from facade");
-            string content = "Congratulations on becoming a part of our team. We hope";
+            string content = "Congratulations on becoming a part of our team.";
             mailSender.SendMail(email, content);
             return id;
         }

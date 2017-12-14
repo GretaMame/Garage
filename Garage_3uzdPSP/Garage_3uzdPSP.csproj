@@ -79,7 +79,6 @@
     <Compile Include="GarageService\GarageServiceRepository\MemoryGarageServiceRepository.cs" />
     <Compile Include="GarageService\GarageServiceUI\ConsoleGarageServiceUI.cs" />
     <Compile Include="GarageService\GarageServiceUI\IGarageServiceUI.cs" />
-    <Compile Include="HR\HRUI\IHRUI.cs" />
     <Compile Include="Integration\MailSenderWithSiganture.cs" />
     <Compile Include="Supply\SupplyControllers\ISupplyController.cs" />
     <Compile Include="Supply\SupplyDomainEntities\AfterMarketPart.cs" />
@@ -121,7 +120,7 @@
     <Compile Include="HR\HRDomainServices\IBenefitsProvider.cs" />
     <Compile Include="HR\HRDomainServices\IPayCalculator.cs" />
     <Compile Include="HR\HRDomainServices\SimplePayCalculator.cs" />
-    <Compile Include="HR\HRUI\ConsoleHRUI.cs" />
+    <Compile Include="HR\HRRepository\HRUI\ConsoleHRUI.cs" />
     <Compile Include="GarageService\GarageServiceRepository\ICustomerRepository.cs" />
     <Compile Include="HR\HRRepository\IEmployeeRepository.cs" />
     <Compile Include="GarageService\GarageServiceRepository\MemoryCustomerRepository.cs" />
